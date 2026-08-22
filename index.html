@@ -13,720 +13,241 @@
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
     background:#080808;
     color:white;
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:Arial,sans-serif;
+    min-height:100vh;
 }
 
-header{
-    position:sticky;
-    top:0;
-    z-index:100;
-    background:rgba(8,8,8,.95);
-    backdrop-filter:blur(15px);
-    border-bottom:1px solid #222;
-}
-
-.navbar{
-    max-width:1100px;
+.container{
+    width:100%;
+    max-width:500px;
     margin:auto;
-    padding:16px 20px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+    padding:35px 20px;
+    text-align:center;
 }
 
+/* LOGO */
 .logo{
-    font-size:25px;
-    font-weight:900;
-    letter-spacing:2px;
-}
-
-.logo span{
-    color:#ff2990;
-}
-
-nav{
-    display:flex;
-    gap:20px;
-}
-
-nav a{
-    color:#aaa;
-    text-decoration:none;
-    font-size:12px;
-    font-weight:bold;
-}
-
-nav a:hover{
-    color:#ff2990;
-}
-
-/* HERO */
-
-.hero{
-    min-height:500px;
-    display:flex;
-    align-items:center;
-    padding:70px 20px;
-    background:
-    radial-gradient(circle at 80% 20%,rgba(255,41,144,.25),transparent 35%),
-    radial-gradient(circle at 20% 80%,rgba(90,40,255,.18),transparent 35%);
-}
-
-.hero-content{
-    max-width:1100px;
-    width:100%;
+    width:90px;
+    height:90px;
     margin:auto;
-}
-
-.badge{
-    display:inline-block;
-    padding:8px 14px;
-    border:1px solid #ff2990;
-    border-radius:30px;
-    color:#ff2990;
-    font-size:10px;
-    font-weight:bold;
-}
-
-.hero h1{
-    margin-top:20px;
-    font-size:clamp(55px,12vw,100px);
-    line-height:.9;
-    font-weight:900;
-    letter-spacing:-3px;
-}
-
-.hero h1 span{
-    color:#ff2990;
-}
-
-.hero p{
-    max-width:600px;
-    margin-top:25px;
-    color:#999;
-    line-height:1.7;
-    font-size:14px;
-}
-
-.buttons{
-    display:flex;
-    gap:12px;
-    margin-top:30px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-block;
-    padding:14px 20px;
-    border-radius:9px;
-    text-decoration:none;
-    font-size:12px;
-    font-weight:bold;
-}
-
-.btn-primary{
-    background:#ff2990;
-    color:white;
-}
-
-.btn-secondary{
-    border:1px solid #333;
-    color:white;
-}
-
-/* SECTION */
-
-.section{
-    max-width:1100px;
-    margin:auto;
-    padding:70px 20px;
-}
-
-.title{
-    margin-bottom:30px;
-}
-
-.title h2{
-    font-size:35px;
-    font-weight:900;
-}
-
-.title h2 span{
-    color:#ff2990;
-}
-
-.title p{
-    color:#666;
-    margin-top:7px;
-    font-size:11px;
-}
-
-/* SEARCH */
-
-.search{
-    width:100%;
-    padding:15px;
-    margin-bottom:25px;
-    background:#111;
-    border:1px solid #292929;
-    border-radius:10px;
-    color:white;
-    outline:none;
-}
-
-.search:focus{
-    border-color:#ff2990;
-}
-
-/* PRODUCTS */
-
-.products{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.product{
-    background:#111;
-    border:1px solid #242424;
-    border-radius:16px;
-    overflow:hidden;
-    transition:.3s;
-}
-
-.product:hover{
-    transform:translateY(-5px);
-    border-color:#ff2990;
-}
-
-.product-photo{
-    height:210px;
-    background:#181818;
+    border-radius:50%;
+    background:#ff2b91;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:60px;
+    font-size:22px;
+    font-weight:900;
+    box-shadow:0 0 30px rgba(255,43,145,.35);
 }
 
-.product-info{
-    padding:20px;
+h1{
+    margin-top:15px;
+    font-size:25px;
+}
+
+.bio{
+    color:#999;
+    font-size:13px;
+    margin-top:8px;
+}
+
+/* GAME */
+.title{
+    margin-top:35px;
+    margin-bottom:15px;
+    font-size:13px;
+    color:#ff2b91;
+    font-weight:bold;
+    letter-spacing:1px;
 }
 
 .game{
-    color:#ff2990;
-    font-size:10px;
-    font-weight:bold;
-    text-transform:uppercase;
-}
-
-.product h3{
-    margin-top:8px;
-    font-size:17px;
-}
-
-.description{
-    color:#777;
-    font-size:11px;
-    line-height:1.6;
-    margin-top:8px;
-}
-
-.price{
-    margin-top:18px;
-    font-size:21px;
-    font-weight:900;
-}
-
-.status{
-    display:inline-block;
-    margin-top:10px;
-    padding:6px 10px;
-    border-radius:20px;
-    background:rgba(0,230,120,.1);
-    color:#00e878;
-    font-size:9px;
-    font-weight:bold;
-}
-
-.buy{
-    display:block;
-    margin-top:15px;
-    padding:13px;
-    text-align:center;
-    background:#ff2990;
-    color:white;
-    border-radius:9px;
-    text-decoration:none;
-    font-size:11px;
-    font-weight:bold;
-}
-
-/* FEATURES */
-
-.features{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.feature{
-    padding:25px;
-    background:#111;
-    border:1px solid #222;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:#151515;
+    border:1px solid #292929;
+    padding:16px;
+    margin:12px 0;
     border-radius:14px;
+    text-decoration:none;
+    color:white;
+    transition:.2s;
 }
 
-.feature-icon{
-    font-size:30px;
+.game:hover{
+    transform:translateY(-3px);
+    border-color:#ff2b91;
 }
 
-.feature h3{
-    margin-top:12px;
+.icon{
+    width:50px;
+    height:50px;
+    border-radius:12px;
+    background:#222;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
 }
 
-.feature p{
+.game-info{
+    text-align:left;
+    flex:1;
+}
+
+.game-name{
+    font-size:15px;
+    font-weight:bold;
+}
+
+.game-desc{
     color:#777;
     font-size:11px;
-    line-height:1.7;
-    margin-top:8px;
+    margin-top:5px;
 }
 
-/* CONTACT */
-
-.contact{
-    text-align:center;
-    padding:90px 20px;
-    background:radial-gradient(circle,rgba(255,41,144,.16),transparent 60%);
+.arrow{
+    color:#ff2b91;
+    font-size:20px;
 }
 
-.contact h2{
-    font-size:40px;
-    font-weight:900;
-}
-
-.contact h2 span{
-    color:#ff2990;
-}
-
-.contact p{
-    color:#777;
-    font-size:12px;
-    margin:12px 0 25px;
-}
-
-.whatsapp{
-    display:inline-block;
-    padding:15px 25px;
-    background:#25D366;
+/* SOSMED */
+.social{
+    display:block;
+    background:#151515;
+    border:1px solid #292929;
+    padding:15px;
+    margin:10px 0;
+    border-radius:12px;
     color:white;
     text-decoration:none;
-    border-radius:10px;
+    font-size:13px;
     font-weight:bold;
-    font-size:12px;
 }
 
-/* FOOTER */
+.social:hover{
+    border-color:#ff2b91;
+}
 
-footer{
-    padding:30px;
-    text-align:center;
-    border-top:1px solid #222;
+.footer{
+    margin-top:30px;
     color:#555;
     font-size:10px;
-}
-
-footer strong{
-    color:#ff2990;
-    font-size:16px;
-}
-
-/* MOBILE */
-
-@media(max-width:800px){
-
-    nav{
-        display:none;
-    }
-
-    .hero{
-        min-height:500px;
-    }
-
-    .products{
-        grid-template-columns:1fr;
-    }
-
-    .features{
-        grid-template-columns:1fr;
-    }
-
-    .product-photo{
-        height:200px;
-    }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="navbar">
+<div class="container">
 
-<div class="logo">
-CEE<span>SHOP</span>
-</div>
+    <div class="logo">
+        CEE
+    </div>
 
-<nav>
-<a href="#home">HOME</a>
-<a href="#produk">PRODUK</a>
-<a href="#keunggulan">KEUNGGULAN</a>
-<a href="#contact">CONTACT</a>
-</nav>
+    <h1>CEE SHOP</h1>
 
-</div>
-</header>
+    <p class="bio">
+        GAME ACCOUNT STORE 🎮<br>
+        eFootball & Free Fire
+    </p>
 
 
-<section class="hero" id="home">
-
-<div class="hero-content">
-
-<div class="badge">
-🎮 GAME ACCOUNT STORE
-</div>
-
-<h1>
-CEE<br>
-<span>SHOP.</span>
-</h1>
-
-<p>
-Tempat jual beli akun game dengan tampilan modern.
-Pilih akun yang kamu inginkan dan langsung hubungi
-CEE SHOP melalui WhatsApp.
-</p>
-
-<div class="buttons">
-
-<a href="#produk" class="btn btn-primary">
-🛒 LIHAT PRODUK
-</a>
-
-<a href="#contact" class="btn btn-secondary">
-💬 HUBUNGI KAMI
-</a>
-
-</div>
-
-</div>
-
-</section>
+    <!-- GAME -->
+    <div class="title">
+        PILIH GAME
+    </div>
 
 
-<section class="section" id="produk">
+    <a class="game"
+       href="https://wa.me/628134809180?text=Halo%20CEE%20SHOP,%20saya%20ingin%20melihat%20akun%20eFootball."
+       target="_blank">
 
-<div class="title">
+        <div class="icon">⚽</div>
 
-<h2>
-ACCOUNT <span>STORE</span>
-</h2>
+        <div class="game-info">
+            <div class="game-name">
+                eFootball
+            </div>
 
-<p>
-PILIH AKUN GAME YANG TERSEDIA
-</p>
+            <div class="game-desc">
+                Jual beli akun eFootball
+            </div>
+        </div>
 
-</div>
+        <div class="arrow">
+            ›
+        </div>
 
-<input
-class="search"
-id="search"
-type="text"
-placeholder="🔎 Cari akun game..."
-onkeyup="searchProduct()"
->
-
-
-<div class="products">
+    </a>
 
 
-<!-- PRODUK 1 -->
+    <a class="game"
+       href="https://wa.me/628134809180?text=Halo%20CEE%20SHOP,%20saya%20ingin%20melihat%20akun%20Free%20Fire."
+       target="_blank">
 
-<div class="product">
+        <div class="icon">🔥</div>
 
-<div class="product-photo">
-⚽
-</div>
+        <div class="game-info">
+            <div class="game-name">
+                Free Fire
+            </div>
 
-<div class="product-info">
+            <div class="game-desc">
+                Jual beli akun Free Fire
+            </div>
+        </div>
 
-<div class="game">
-eFootball
-</div>
+        <div class="arrow">
+            ›
+        </div>
 
-<h3>
-Akun eFootball Premium
-</h3>
+    </a>
 
-<p class="description">
-Akun dengan pemain bagus dan siap dimainkan.
-</p>
 
-<div class="price">
-Rp 250.000
-</div>
+    <!-- SOSIAL MEDIA -->
+    <div class="title">
+        FOLLOW & CONTACT
+    </div>
 
-<div class="status">
-● TERSEDIA
-</div>
 
-<a
-class="buy"
-target="_blank"
-href="https://wa.me/628134809180?text=Halo%20CEE%20SHOP,%20saya%20tertarik%20dengan%20akun%20eFootball%20Premium."
->
-💬 BELI SEKARANG
-</a>
+    <a class="social"
+       href="https://www.tiktok.com/@ceeshop.id"
+       target="_blank">
+        🎵 TikTok — @ceeshop.id
+    </a>
+
+
+    <a class="social"
+       href="https://www.instagram.com/ceeshop.id"
+       target="_blank">
+        📸 Instagram — @ceeshop.id
+    </a>
+
+
+    <a class="social"
+       href="https://wa.me/628134809180"
+       target="_blank">
+        💬 WhatsApp CEE SHOP
+    </a>
+
+
+    <a class="social"
+       href="https://chat.whatsapp.com/Jipz06Y2iYJ4UyPFeSzNsQ"
+       target="_blank">
+        👥 Join Grup WhatsApp
+    </a>
+
+
+    <div class="footer">
+        CEE SHOP © 2026
+    </div>
 
 </div>
-</div>
-
-
-<!-- PRODUK 2 -->
-
-<div class="product">
-
-<div class="product-photo">
-🔥
-</div>
-
-<div class="product-info">
-
-<div class="game">
-Free Fire
-</div>
-
-<h3>
-Akun Free Fire Sultan
-</h3>
-
-<p class="description">
-Koleksi skin dan item menarik.
-</p>
-
-<div class="price">
-Rp 350.000
-</div>
-
-<div class="status">
-● TERSEDIA
-</div>
-
-<a
-class="buy"
-target="_blank"
-href="https://wa.me/628134809180?text=Halo%20CEE%20SHOP,%20saya%20tertarik%20dengan%20akun%20Free%20Fire%20Sultan."
->
-💬 BELI SEKARANG
-</a>
-
-</div>
-</div>
-
-
-<!-- PRODUK 3 -->
-
-<div class="product">
-
-<div class="product-photo">
-🎮
-</div>
-
-<div class="product-info">
-
-<div class="game">
-Mobile Legends
-</div>
-
-<h3>
-Akun MLBB
-</h3>
-
-<p class="description">
-Akun siap dimainkan dengan koleksi hero dan skin.
-</p>
-
-<div class="price">
-Rp 450.000
-</div>
-
-<div class="status">
-● TERSEDIA
-</div>
-
-<a
-class="buy"
-target="_blank"
-href="https://wa.me/628134809180?text=Halo%20CEE%20SHOP,%20saya%20tertarik%20dengan%20akun%20Mobile%20Legends."
->
-💬 BELI SEKARANG
-</a>
-
-</div>
-</div>
-
-
-</div>
-</section>
-
-
-<section class="section" id="keunggulan">
-
-<div class="title">
-
-<h2>
-WHY <span>CEE SHOP?</span>
-</h2>
-
-<p>
-KENAPA BELI DI CEE SHOP?
-</p>
-
-</div>
-
-
-<div class="features">
-
-<div class="feature">
-
-<div class="feature-icon">
-🔒
-</div>
-
-<h3>
-Aman
-</h3>
-
-<p>
-Proses transaksi dibuat jelas dan mudah
-untuk pembeli.
-</p>
-
-</div>
-
-
-<div class="feature">
-
-<div class="feature-icon">
-⚡
-</div>
-
-<h3>
-Cepat
-</h3>
-
-<p>
-Hubungi kami melalui WhatsApp untuk
-proses pembelian.
-</p>
-
-</div>
-
-
-<div class="feature">
-
-<div class="feature-icon">
-💎
-</div>
-
-<h3>
-Berkualitas
-</h3>
-
-<p>
-Pilihan akun game dengan berbagai
-kategori dan harga.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="contact" id="contact">
-
-<h2>
-READY TO <span>BUY?</span>
-</h2>
-
-<p>
-Klik tombol di bawah untuk langsung menghubungi CEE SHOP.
-</p>
-
-<a
-class="whatsapp"
-target="_blank"
-href="https://wa.me/628134809180?text=Halo%20CEE%20SHOP,%20saya%20ingin%20membeli%20akun%20game."
->
-💬 CHAT WHATSAPP
-</a>
-
-</section>
-
-
-<footer>
-
-<strong>CEE SHOP</strong>
-
-<br><br>
-
-GAME ACCOUNT STORE © 2026
-
-</footer>
-
-
-<script>
-
-function searchProduct(){
-
-let input =
-document
-.getElementById("search")
-.value
-.toLowerCase();
-
-let products =
-document
-.querySelectorAll(".product");
-
-products.forEach(function(product){
-
-let text =
-product.innerText.toLowerCase();
-
-if(text.includes(input)){
-
-product.style.display="";
-
-}else{
-
-product.style.display="none";
-
-}
-
-});
-
-}
-
-</script>
 
 </body>
 </html>
