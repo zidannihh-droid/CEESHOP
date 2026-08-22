@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CEE SHOP | Game Account Store</title>
+<title>CEE SHOP</title>
 
 <style>
 *{
@@ -14,142 +14,279 @@
 }
 
 body{
-    background:#080808;
-    color:white;
-    font-family:Arial,sans-serif;
+    background:#ffffff;
+    color:#171717;
+    font-family:Arial, Helvetica, sans-serif;
     min-height:100vh;
 }
 
 .container{
     width:100%;
-    max-width:500px;
+    max-width:520px;
     margin:auto;
-    padding:35px 20px;
+    padding:45px 22px 30px;
     text-align:center;
 }
 
 /* LOGO */
+
 .logo{
-    width:90px;
-    height:90px;
+    width:82px;
+    height:82px;
     margin:auto;
-    border-radius:50%;
-    background:#ff2b91;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:22px;
-    font-weight:900;
-    box-shadow:0 0 30px rgba(255,43,145,.35);
+
+    border-radius:50%;
+
+    background:#ff2b91;
+    color:white;
+
+    font-size:20px;
+    font-weight:400;
+    letter-spacing:1px;
+
+    box-shadow:0 8px 30px rgba(255,43,145,.18);
 }
 
 h1{
-    margin-top:15px;
+    margin-top:18px;
+
     font-size:25px;
+    font-weight:400;
+    letter-spacing:2px;
 }
 
 .bio{
-    color:#999;
-    font-size:13px;
     margin-top:8px;
+
+    color:#777;
+    font-size:13px;
+    font-weight:400;
+    line-height:1.7;
 }
 
-/* GAME */
+
+/* SECTION TITLE */
+
 .title{
-    margin-top:35px;
+    margin-top:38px;
     margin-bottom:15px;
-    font-size:13px;
+
     color:#ff2b91;
-    font-weight:bold;
-    letter-spacing:1px;
+
+    font-size:11px;
+    font-weight:400;
+
+    letter-spacing:2px;
 }
+
+
+/* GAME BUTTON */
 
 .game{
+    position:relative;
+
     display:flex;
     align-items:center;
+
     gap:15px;
-    background:#151515;
-    border:1px solid #292929;
-    padding:16px;
+
+    width:100%;
+
+    padding:15px;
+
     margin:12px 0;
-    border-radius:14px;
+
+    background:#ffffff;
+
+    border:1px solid #eeeeee;
+    border-radius:15px;
+
     text-decoration:none;
-    color:white;
-    transition:.2s;
+    color:#171717;
+
+    transition:.25s;
 }
 
 .game:hover{
     transform:translateY(-3px);
+
     border-color:#ff2b91;
+
+    box-shadow:0 10px 30px rgba(255,43,145,.12);
 }
 
 .icon{
-    width:50px;
-    height:50px;
-    border-radius:12px;
-    background:#222;
+    width:48px;
+    height:48px;
+
+    flex-shrink:0;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:25px;
+
+    border-radius:12px;
+
+    background:#fff0f7;
+
+    font-size:23px;
 }
 
 .game-info{
-    text-align:left;
     flex:1;
+    text-align:left;
 }
 
 .game-name{
     font-size:15px;
-    font-weight:bold;
+    font-weight:400;
+    letter-spacing:.3px;
 }
 
 .game-desc{
-    color:#777;
-    font-size:11px;
     margin-top:5px;
+
+    color:#999;
+
+    font-size:11px;
+    font-weight:400;
 }
 
 .arrow{
     color:#ff2b91;
-    font-size:20px;
+    font-size:22px;
+    font-weight:400;
 }
 
-/* SOSMED */
+
+/* SOCIAL BUTTON */
+
 .social{
     display:block;
-    background:#151515;
-    border:1px solid #292929;
+
+    width:100%;
+
     padding:15px;
+
     margin:10px 0;
-    border-radius:12px;
-    color:white;
+
+    background:#ffffff;
+
+    border:1px solid #eeeeee;
+    border-radius:13px;
+
+    color:#333;
+
     text-decoration:none;
+
     font-size:13px;
-    font-weight:bold;
+    font-weight:400;
+
+    transition:.25s;
 }
 
 .social:hover{
+    transform:translateY(-2px);
+
     border-color:#ff2b91;
+
+    color:#ff2b91;
+
+    box-shadow:0 8px 25px rgba(255,43,145,.10);
 }
 
+
+/* WHATSAPP */
+
+.whatsapp{
+    display:block;
+
+    width:100%;
+
+    padding:15px;
+
+    margin:10px 0;
+
+    background:#ff2b91;
+
+    border:1px solid #ff2b91;
+
+    border-radius:13px;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:13px;
+    font-weight:400;
+
+    transition:.25s;
+}
+
+.whatsapp:hover{
+    background:#ff4ca5;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(255,43,145,.20);
+}
+
+
+/* FOOTER */
+
 .footer{
-    margin-top:30px;
-    color:#555;
+    margin-top:35px;
+
+    color:#aaa;
+
     font-size:10px;
+    font-weight:400;
+
+    letter-spacing:1px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:400px){
+
+    .container{
+        padding:35px 17px 25px;
+    }
+
+    .logo{
+        width:75px;
+        height:75px;
+    }
+
+    h1{
+        font-size:23px;
+    }
 }
 </style>
 </head>
+
 
 <body>
 
 <div class="container">
 
+
+    <!-- LOGO -->
+
     <div class="logo">
         CEE
     </div>
 
-    <h1>CEE SHOP</h1>
+
+    <h1>
+        CEE SHOP
+    </h1>
+
 
     <p class="bio">
         GAME ACCOUNT STORE 🎮<br>
@@ -157,19 +294,28 @@ h1{
     </p>
 
 
+
     <!-- GAME -->
+
     <div class="title">
         PILIH GAME
     </div>
 
 
-    <a class="game"
-       href="https://wa.me/628134809180?text=Halo%20CEE%20SHOP,%20saya%20ingin%20melihat%20akun%20eFootball."
-       target="_blank">
+    <!-- EFOOTBALL -->
 
-        <div class="icon">⚽</div>
+    <a
+        class="game"
+        href="https://wa.me/628134809180?text=Halo%20CEE%20SHOP,%20saya%20ingin%20melihat%20akun%20eFootball."
+        target="_blank"
+    >
+
+        <div class="icon">
+            ⚽
+        </div>
 
         <div class="game-info">
+
             <div class="game-name">
                 eFootball
             </div>
@@ -177,6 +323,7 @@ h1{
             <div class="game-desc">
                 Jual beli akun eFootball
             </div>
+
         </div>
 
         <div class="arrow">
@@ -186,13 +333,21 @@ h1{
     </a>
 
 
-    <a class="game"
-       href="https://wa.me/628134809180?text=Halo%20CEE%20SHOP,%20saya%20ingin%20melihat%20akun%20Free%20Fire."
-       target="_blank">
 
-        <div class="icon">🔥</div>
+    <!-- FREE FIRE -->
+
+    <a
+        class="game"
+        href="https://wa.me/628134809180?text=Halo%20CEE%20SHOP,%20saya%20ingin%20melihat%20akun%20Free%20Fire."
+        target="_blank"
+    >
+
+        <div class="icon">
+            🔥
+        </div>
 
         <div class="game-info">
+
             <div class="game-name">
                 Free Fire
             </div>
@@ -200,6 +355,7 @@ h1{
             <div class="game-desc">
                 Jual beli akun Free Fire
             </div>
+
         </div>
 
         <div class="arrow">
@@ -209,43 +365,55 @@ h1{
     </a>
 
 
-    <!-- SOSIAL MEDIA -->
+
+    <!-- SOCIAL MEDIA -->
+
     <div class="title">
-        FOLLOW & CONTACT
+        SOCIAL MEDIA
     </div>
 
 
-    <a class="social"
-       href="https://www.tiktok.com/@ceeshop.id"
-       target="_blank">
-        🎵 TikTok — @ceeshop.id
+    <a
+        class="social"
+        href="https://www.tiktok.com/@ceeshop.id"
+        target="_blank"
+    >
+        TikTok · @ceeshop.id
     </a>
 
 
-    <a class="social"
-       href="https://www.instagram.com/ceeshop.id"
-       target="_blank">
-        📸 Instagram — @ceeshop.id
+    <a
+        class="social"
+        href="https://www.instagram.com/ceeshop.id"
+        target="_blank"
+    >
+        Instagram · @ceeshop.id
     </a>
 
 
-    <a class="social"
-       href="https://wa.me/628134809180"
-       target="_blank">
-        💬 WhatsApp CEE SHOP
+    <a
+        class="whatsapp"
+        href="https://wa.me/628134809180"
+        target="_blank"
+    >
+        WhatsApp CEE SHOP
     </a>
 
 
-    <a class="social"
-       href="https://chat.whatsapp.com/Jipz06Y2iYJ4UyPFeSzNsQ"
-       target="_blank">
-        👥 Join Grup WhatsApp
+    <a
+        class="social"
+        href="https://chat.whatsapp.com/Jipz06Y2iYJ4UyPFeSzNsQ"
+        target="_blank"
+    >
+        Grup WhatsApp
     </a>
+
 
 
     <div class="footer">
         CEE SHOP © 2026
     </div>
+
 
 </div>
 
